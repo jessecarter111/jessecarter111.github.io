@@ -1,0 +1,31 @@
+body {
+    background-color: #222222;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+.intro {
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.intro h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.intro h3{
+    font-size: 1rem;
+    margin-top: 0;
+    margin-left: 1rem;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: slategray;
+    border-width: 5px;
+    width: 5%;
+    margin: 50px auto 50px auto;
+}
