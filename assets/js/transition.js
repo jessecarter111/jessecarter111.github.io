@@ -8,6 +8,7 @@ $(document).ready(function () {
         Cookies.set('color', $('.body').attr('color'));
     })
     //setLinks();
+    console.log(Cookies.get("color"));
     reverse(Cookies.get("color"));
     animate();
 });
