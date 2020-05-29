@@ -1,14 +1,21 @@
 console.log($('.content').attr('class'));
 console.log($('body').attr('class'));
+
 $(document).ready(function () {
+
+    //store value
+    $('input[type=button]').click(function() {
+        $.cookie("color", null);
+        $.cookie("color", $('body').attr('class'));
+    })
     //setLinks();
-    reverse();
+    reverse($.cookie("color"));
     animate();
 });
 
-function reverse(){
+function reverse(color){
     console.log($('body').attr('class'));
-    currColor = $('body').attr('class');
+    currColor = color;
     if (currColor == 'white'){
         $('body').removeClass('white');
         $('.content').removeClass('black');
