@@ -2,31 +2,27 @@ console.log($('.content').attr('class'));
 console.log($('body').attr('class'));
 
 $(document).ready(function () {
-
-    console.log(Cookies.get("color"));
-    Cookies.set('color', $('body').attr('class'));
-    //setLinks();
-    console.log(Cookies.get("color"));
+    if(!Cookies.get('color')){
+        Cookies.set('color', 'black');
+    }
     reverse(Cookies.get("color"));
     animate();
 });
 
 function reverse(color){
-    console.log(color);
-    currColor = color;
-    if (currColor == 'white'){
+    if (color == 'white'){
         $('body').removeClass('white');
         $('.content').removeClass('black');
-
         $('body').addClass('black');
         $('.content').addClass('white');
+        Cookies.set('color', 'black');
     }
-    if (currColor == 'black') {
+    if (color == 'black') {
         $('body').removeClass('black');
         $('.content').removeClass('white');
-
         $('body').addClass('white');
         $('.content').addClass('black');
+        Cookies.set('color', 'white');
     }
 }
 
