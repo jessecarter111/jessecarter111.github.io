@@ -15,7 +15,7 @@ function reverse(color){
         $('.content').removeClass('black');
         $('body').addClass('black');
         $('.content').addClass('white');
-        $("#globe-gif").attr('src', 'assets/img/gif/globe-black.gif');
+        $("#globe-gif").attr('src', 'assets/img/gif/globe-white.gif');
         Cookies.set('color', 'black');
     }
     if (color == 'black') {
@@ -23,7 +23,7 @@ function reverse(color){
         $('.content').removeClass('white');
         $('body').addClass('white');
         $('.content').addClass('black');
-        $("#globe-gif").attr('src', 'assets/img/gif/globe-white.gif');
+        $("#globe-gif").attr('src', 'assets/img/gif/globe-black.gif');
         Cookies.set('color', 'white');
     }
 }
