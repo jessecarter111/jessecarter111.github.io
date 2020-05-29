@@ -5,16 +5,15 @@ $(document).ready(function () {
 
     //store value
     $('input[type=button]').click(function() {
-        $.cookie("color", null);
-        $.cookie("color", $('body').attr('class'));
+        Cookies.set('color', $('.body').attr('color'));
     })
     //setLinks();
-    reverse($.cookie("color"));
+    reverse(Cookies.get("color"));
     animate();
 });
 
 function reverse(color){
-    console.log($('body').attr('class'));
+    console.log(color);
     currColor = color;
     if (currColor == 'white'){
         $('body').removeClass('white');
