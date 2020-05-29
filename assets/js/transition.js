@@ -4,7 +4,7 @@ console.log($('body').attr('class'));
 $(document).ready(function () {
 
     console.log(Cookies.get("color"));
-    Cookies.set('color', $('.body').attr('color'));
+    Cookies.set('color', $('.body').attr('class'));
     //setLinks();
     console.log(Cookies.get("color"));
     reverse(Cookies.get("color"));
