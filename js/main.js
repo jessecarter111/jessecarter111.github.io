@@ -90,16 +90,20 @@ function reverse(color) {
   if (color == 'white') {
     $('body').removeClass('white');
     $('.content').removeClass('black');
+    $('main').removeClass('white');
     $('body').addClass('black');
     $('.content').addClass('white');
+    $('main').addClass('black');
     $("#globe-gif").attr('src', 'assets/img/gif/globe-white.gif');
     Cookies.set('color', 'black');
   }
   if (color == 'black') {
     $('body').removeClass('black');
     $('.content').removeClass('white');
+    $('main').removeClass('black');
     $('body').addClass('white');
     $('.content').addClass('black');
+    $('main').addClass('white');
     $("#globe-gif").attr('src', 'assets/img/gif/globe-black.gif');
     Cookies.set('color', 'white');
   }
