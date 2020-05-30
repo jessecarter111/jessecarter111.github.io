@@ -17,7 +17,6 @@ jQuery(document).ready(function (event) {
     if (!isAnimating) changePage(newPage, true);
     firstLoad = true;
   });
-
   //detect the 'popstate' event - e.g. user clicking the back button
   $(window).on('popstate', function () {
     if (firstLoad) {
