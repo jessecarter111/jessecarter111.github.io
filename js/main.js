@@ -8,7 +8,6 @@ jQuery(document).ready(function (event) {
     if (!Cookies.get('color')) {
       Cookies.set('color', 'black');
     }
-    reverse(Cookies.get("color"));
     event.preventDefault();
     //detect which page has been selected
     console.log('this: ' + $(this).attr('href'));
@@ -39,6 +38,7 @@ jQuery(document).ready(function (event) {
     // trigger page animation
     $('body').addClass('page-is-changing');
     $('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
+      reverse(Cookies.get("color"));
       loadNewContent(url, bool);
       newLocation = url;
       $('.cd-loading-bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
