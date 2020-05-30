@@ -36,6 +36,14 @@ jQuery(document).ready(function (event) {
         isAnimating = true;
         // trigger page animation
         $('.content').addClass('animate_content');
+        
+        setTimeout(function () {
+        $('.cotent').removeClass('animate_content');
+        }, 3200);
+
+    setTimeout(function () {
+        $('.content').removeClass('fadeIn');
+        }, 1500);
         loadNewContent(url, bool);
         newLocation = url;
         //if browser doesn't support CSS transitions
