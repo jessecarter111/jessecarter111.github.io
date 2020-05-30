@@ -48,15 +48,17 @@ jQuery(document).ready(function (event) {
     function loadNewContent(url, bool) {
         console.log("loadNewContent");
         url = ('' == url) ? 'index.html' : url;
+        console.log("url: "+url);
         //url = "if url is empty -> make it index.html otherwise make it url"
         var newSection = '' + url.replace('.html', '');
+        console.log("newSection: "+newSection);
         //remove the html tag
         var section = $('<div class="content ' + newSection + '"></div>');
-        console.log("section.load");
+        console.log("secton: "+section);
         section.load(url + ' .content > *', function (event) {
             // load new content and replace <main> content with the new one
-            console.log("weMadeIt");
-            $('main').html(section);
+            console.log();
+            $('.page_description').html(section);
             //if browser doesn't support CSS transitions - dont wait for the end of transitions
             var delay = (transitionsSupported()) ? 1200 : 0;
             setTimeout(function () {
