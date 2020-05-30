@@ -35,7 +35,7 @@ jQuery(document).ready(function (event) {
         console.log("changePage");
         isAnimating = true;
         // trigger page animation
-        $('content').addClass('animate_content');
+        $('.content').addClass('animate_content');
         loadNewContent(url, bool);
         newLocation = url;
         //if browser doesn't support CSS transitions
