@@ -169,7 +169,7 @@ main p {
   text-align: left;
 }
 */
-
+/*
 @media only screen and (min-width: 768px) {
   main {
     padding: 20px;
@@ -187,7 +187,7 @@ main p {
     font-size: 1.8rem;
     line-height: 2;
   }
-}
+}*/
 
 .cd-cover-layer {
   /* layer that covers the content when the animation is triggered */
