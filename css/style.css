@@ -6,14 +6,12 @@ Primary style
 *, *::after, *::before {
   box-sizing: border-box;
 }
-/*
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 4.4rem;
     font-weight: 300;
   }
 }
-*/
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -171,7 +169,7 @@ main p {
   text-align: left;
 }
 */
-/*
+
 @media only screen and (min-width: 768px) {
   main {
     padding: 20px;
@@ -190,7 +188,6 @@ main p {
     line-height: 2;
   }
 }
-*/
 
 .cd-cover-layer {
   /* layer that covers the content when the animation is triggered */
@@ -228,14 +225,12 @@ main p {
   transition: opacity 0.3s 0s, visibility 0s 0s;
 }
 
-/*
 @media only screen and (min-width: 768px) {
   .cd-cover-layer {
     height: calc(100% - 40px);
     width: calc(100% - 40px);
   }
 }
-*/
 
 .cd-loading-bar {
   /* this is the loding bar - visible while switching from one page to the following one */
@@ -285,10 +280,9 @@ main p {
   -moz-transition: -moz-transform 0.8s 0.8s ease-in;
   transition: transform 0.8s 0.8s ease-in;
 }
-/*
+
 @media only screen and (min-width: 768px) {
   .cd-loading-bar {
     width: calc(100% - 40px);
   }
 }
-*/
