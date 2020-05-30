@@ -1,6 +1,5 @@
 $(document).ready(function(){
   $('.btn_nav').click(function () {
-    console.log(".btn_van");
     // animate content
     $('.page__style').addClass('animate_content');
     $('.page__description').fadeOut(100).delay(2800).fadeIn();

@@ -1,16 +1,21 @@
-console.log($('.content').attr('class'));
-console.log($('body').attr('class'));
-
 $(document).ready(function () {
-    if(!Cookies.get('color')){
-        Cookies.set('color', 'black');
-    }
-    reverse(Cookies.get("color"));
-    animate();
+    $('.nav').click(function () {
+        event.preventDefault();
+        if (!Cookies.get('color')) {
+            Cookies.set('color', 'black');
+        }
+        reverse(Cookies.get("color"));
+        animate();
+        url = $(this).attr('href');
+        setTimeout(function () {
+            window.location = url;
+        }, 1500);
+    });
+    setLinks();
 });
 
-function reverse(color){
-    if (color == 'white'){
+function reverse(color) {
+    if (color == 'white') {
         $('body').removeClass('white');
         $('.content').removeClass('black');
         $('body').addClass('black');
@@ -30,8 +35,8 @@ function reverse(color){
 
 function animate() {
     $('.content').addClass('animate_content');
-    /*
     $('.page_description').fadeOut(100).delay(2800).fadeIn();
+
     setTimeout(function () {
         $('.cotent').removeClass('animate_content');
     }, 3200);
@@ -39,7 +44,6 @@ function animate() {
     setTimeout(function () {
         $('.content').removeClass('fadeIn');
     }, 1500);
-    */
 }
 
 function setLinks() {
