@@ -9,7 +9,7 @@ jQuery(document).ready(function (event) {
         event.preventDefault();
         //detect which page has been selected
         var newPage = $(this).attr('href');
-        console.log("newPage = "+newPage);
+        console.log("newPage = " + newPage);
         //if the page is not already being animated - trigger animation
         if (!isAnimating) changePage(newPage, true);
         firstLoad = true;
@@ -36,14 +36,15 @@ jQuery(document).ready(function (event) {
         isAnimating = true;
         // trigger page animation
         $('.content').addClass('animate_content');
-        
+
         setTimeout(function () {
-        $('.cotent').removeClass('animate_content');
+            $('.cotent').removeClass('animate_content');
         }, 3200);
 
-    setTimeout(function () {
-        $('.content').removeClass('fadeIn');
+        setTimeout(function () {
+            $('.content').removeClass('fadeIn');
         }, 1500);
+        setLinks();
         loadNewContent(url, bool);
         newLocation = url;
         //if browser doesn't support CSS transitions
@@ -56,13 +57,13 @@ jQuery(document).ready(function (event) {
     function loadNewContent(url, bool) {
         console.log("loadNewContent");
         url = ('' == url) ? 'index.html' : url;
-        console.log("url: "+url);
+        console.log("url: " + url);
         //url = "if url is empty -> make it index.html otherwise make it url"
         var newSection = '' + url.replace('.html', '');
-        console.log("newSection: "+newSection);
+        console.log("newSection: " + newSection);
         //remove the html tag
         var section = $('<div class="content ' + newSection + '"></div>');
-        console.log("secton: "+section);
+        console.log("secton: " + section);
         section.load(url + ' .content > *', function (event) {
             // load new content and replace <main> content with the new one
             console.log();
@@ -71,9 +72,8 @@ jQuery(document).ready(function (event) {
             var delay = (transitionsSupported()) ? 1200 : 0;
             setTimeout(function () {
                 //wait for the end of the transition on the loading bar before revealing the new content
-               
+
                 $('body').removeClass('page-is-changing');
-                $('.content').removeClass('animate-content');
                 isAnimating = false;
                 if (!transitionsSupported()) isAnimating = false;
             }, delay);
@@ -90,5 +90,19 @@ jQuery(document).ready(function (event) {
 
     function transitionsSupported() {
         return $('html').hasClass('csstransitions');
+    }
+
+    function setLinks() {
+        $('.index_link').click(function () {
+            setTimeout(function () {
+                $('.index').addClass('fadeIn');
+            }, 1500);
+        });
+
+        $('.work_link').click(function () {
+            setTimeout(function () {
+                $('.work').addClass('fadeIn');
+            }, 1500);
+        });
     }
 });
