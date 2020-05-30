@@ -65,6 +65,7 @@ jQuery(document).ready(function (event) {
                 //wait for the end of the transition on the loading bar before revealing the new content
                
                 $('body').removeClass('page-is-changing');
+                $('.content').removeClass('animate-content');
                 isAnimating = false;
                 if (!transitionsSupported()) isAnimating = false;
             }, delay);
