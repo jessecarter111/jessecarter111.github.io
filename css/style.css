@@ -76,7 +76,7 @@ body::after, body::before {
   width: 100%;
   position: fixed;
   left: 0;
-  background-color: #222;
+  background-color: #222; 
   z-index: 1;
   /* Force Hardware Acceleration */
   -webkit-backface-visibility: hidden;
@@ -208,7 +208,7 @@ main p {
   width: calc(100% - 20px);
   opacity: 0;
   visibility: hidden;
-  background-color: #4089a6;
+  /* background-color: #222; */
   -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
   -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
   transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
@@ -245,7 +245,7 @@ main p {
   top: 50%;
   height: 2px;
   width: 90%;
-  background-color: #4089a6;
+  background-color: #fff;
   visibility: hidden;
   -webkit-transition: visibility 0s 0.4s, -webkit-transform 0.4s 0s ease-in;
   -moz-transition: visibility 0s 0.4s, -moz-transform 0.4s 0s ease-in;
