@@ -90,7 +90,6 @@ jQuery(document).ready(function (event) {
     if (color == 'white') {
       $('body').removeClass('white');
       $('.content').removeClass('black');
-      body::after, body::before
       $('body').addClass('black');
       $('.content').addClass('white');
       $("#globe-gif").attr('src', 'assets/img/gif/globe-white.gif');
