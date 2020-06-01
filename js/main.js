@@ -38,7 +38,6 @@ jQuery(document).ready(function (event) {
     // trigger page animation
     $('body').addClass('page-is-changing');
     $('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
-      reverse(Cookies.get("color"));
       loadNewContent(url, bool);
       newLocation = url;
       $('.cd-loading-bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
@@ -51,6 +50,7 @@ jQuery(document).ready(function (event) {
   }
 
   function loadNewContent(url, bool) {
+    reverse(Cookies.get("color"));
     url = ('' == url) ? 'index.html' : url;
     var newSection = 'cd-' + url.replace('.html', '');
     var section = $('<div class="cd-main-content ' + newSection + '"></div>');
@@ -90,9 +90,9 @@ jQuery(document).ready(function (event) {
     if (color == 'white') {
       $('body').removeClass('white');
       $('.content').removeClass('black');
-      $('body::before').attr('background-color', 'black');
-      $('body::after').attr('background-color', 'black');
-      $('cd-loading-bar').attr('background-color', 'black');
+      // $('body::before').attr('background-color', 'black');
+      // $('body::after').attr('background-color', 'black');
+      // $('cd-loading-bar').attr('background-color', 'black');
       $('body').addClass('black');
       $('.content').addClass('white');
       $("#globe-gif").attr('src', 'img/gif/globe-white.gif');
@@ -101,9 +101,9 @@ jQuery(document).ready(function (event) {
     if (color == 'black') {
       $('body').removeClass('black');
       $('.content').removeClass('white');
-      $('body::before').attr('background-color', 'white');
-      $('body::after').attr('background-color', 'white');
-      $('cd-loading-bar').attr('background-color', 'white');
+      // $('body::before').attr('background-color', 'white');
+      // $('body::after').attr('background-color', 'white');
+      // $('cd-loading-bar').attr('background-color', 'white');
       $('body').addClass('white');
       $('.content').addClass('black');
       $("#globe-gif").attr('src', 'img/gif/globe-black.gif');
