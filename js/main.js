@@ -1,4 +1,8 @@
 jQuery(document).ready(function (event) {
+  if (!Cookies.get('color')) {
+    Cookies.set('color', 'black');
+  }
+  reverse(Cookies.get("color"));
   var isAnimating = false,
     newLocation = '';
   firstLoad = false;
@@ -50,7 +54,6 @@ jQuery(document).ready(function (event) {
   }
 
   function loadNewContent(url, bool) {
-    reverse(Cookies.get("color"));
     url = ('' == url) ? 'index.html' : url;
     var newSection = 'cd-' + url.replace('.html', '');
     var section = $('<div class="cd-main-content ' + newSection + '"></div>');
