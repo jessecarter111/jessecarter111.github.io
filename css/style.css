@@ -88,7 +88,7 @@ body::before {
   width: 100%;
   position: fixed;
   left: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
   z-index: 1;
   /* Force Hardware Acceleration */
   -webkit-backface-visibility: hidden;
@@ -259,7 +259,7 @@ main p {
   top: 50%;
   height: 2px;
   width: 90%;
-  background-color: red;
+  /* background-color: red; */
   visibility: hidden;
   -webkit-transition: visibility 0s 0.4s, -webkit-transform 0.4s 0s ease-in;
   -moz-transition: visibility 0s 0.4s, -moz-transform 0.4s 0s ease-in;
