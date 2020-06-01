@@ -62,7 +62,7 @@ jQuery(document).ready(function (event) {
       var delay = (transitionsSupported()) ? 1200 : 0;
       setTimeout(function () {
         //wait for the end of the transition on the loading bar before revealing the new content
-        (section.hasClass('cd-about')) ? $('body').addClass('cd-about'): $('body').removeClass('cd-about');
+        //(section.hasClass('cd-about')) ? $('body').addClass('cd-about'): $('body').removeClass('cd-about');
         $('body').removeClass('page-is-changing');
         $('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
           isAnimating = false;
@@ -90,6 +90,9 @@ jQuery(document).ready(function (event) {
     if (color == 'white') {
       $('body').removeClass('white');
       $('.content').removeClass('black');
+      $('body::before').attr('background-color', 'black');
+      $('body::after').attr('background-color', 'black');
+      $('cd-loading-bar').attr('background-color', 'white');
       $('body').addClass('black');
       $('.content').addClass('white');
       $("#globe-gif").attr('src', 'assets/img/gif/globe-white.gif');
@@ -98,6 +101,9 @@ jQuery(document).ready(function (event) {
     if (color == 'black') {
       $('body').removeClass('black');
       $('.content').removeClass('white');
+      $('body::before').attr('background-color', 'white');
+      $('body::after').attr('background-color', 'white');
+      $('cd-loading-bar').attr('background-color', 'black');
       $('body').addClass('white');
       $('.content').addClass('black');
       $("#globe-gif").attr('src', 'assets/img/gif/globe-black.gif');
