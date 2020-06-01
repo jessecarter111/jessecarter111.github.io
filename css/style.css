@@ -72,8 +72,8 @@ hr {
 Main Components 
 
 -------------------------------- */
-body.black::after,
-body.black::before {
+body::after,
+body::before {
   /* these are the 2 half blocks which cover the content once the animation is triggered */
   content: '';
   height: 50vh;
@@ -128,42 +128,6 @@ body::before {
 }
 
 body::after {
-  bottom: 0;
-  -webkit-transform: translateY(100%);
-  -moz-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  -o-transform: translateY(100%);
-  transform: translateY(100%);
-}
-
-body.black::before {
-  top: 0;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-body.black::after {
-  bottom: 0;
-  -webkit-transform: translateY(100%);
-  -moz-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  -o-transform: translateY(100%);
-  transform: translateY(100%);
-}
-
-body.white::before {
-  top: 0;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-body.white::after {
   bottom: 0;
   -webkit-transform: translateY(100%);
   -moz-transform: translateY(100%);
