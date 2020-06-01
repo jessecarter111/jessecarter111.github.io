@@ -92,10 +92,10 @@ jQuery(document).ready(function (event) {
       $('.content').removeClass('black');
       $('body::before').attr('background-color', 'black');
       $('body::after').attr('background-color', 'black');
-      $('cd-loading-bar').attr('background-color', 'white');
+      $('cd-loading-bar').attr('background-color', 'black');
       $('body').addClass('black');
       $('.content').addClass('white');
-      $("#globe-gif").attr('src', 'assets/img/gif/globe-white.gif');
+      $("#globe-gif").attr('src', 'img/gif/globe-white.gif');
       Cookies.set('color', 'black');
     }
     if (color == 'black') {
@@ -103,10 +103,10 @@ jQuery(document).ready(function (event) {
       $('.content').removeClass('white');
       $('body::before').attr('background-color', 'white');
       $('body::after').attr('background-color', 'white');
-      $('cd-loading-bar').attr('background-color', 'black');
+      $('cd-loading-bar').attr('background-color', 'white');
       $('body').addClass('white');
       $('.content').addClass('black');
-      $("#globe-gif").attr('src', 'assets/img/gif/globe-black.gif');
+      $("#globe-gif").attr('src', 'img/gif/globe-black.gif');
       Cookies.set('color', 'white');
     }
   }
