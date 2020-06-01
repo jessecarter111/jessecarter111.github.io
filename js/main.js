@@ -1,17 +1,9 @@
 jQuery(document).ready(function (event) {
-  if (!Cookies.get('color')) {
-    Cookies.set('color', 'black');
-  }
-  reverse(Cookies.get("color"));
   var isAnimating = false,
     newLocation = '';
   firstLoad = false;
-
   //trigger smooth transition from the actual page to the new one 
   $('main').on('click', '[data-type="page-transition"]', function (event) {
-    if (!Cookies.get('color')) {
-      Cookies.set('color', 'black');
-    }
     event.preventDefault();
     //detect which page has been selected
     console.log('this: ' + $(this).attr('href'));
@@ -59,6 +51,7 @@ jQuery(document).ready(function (event) {
     var section = $('<div class="cd-main-content ' + newSection + '"></div>');
     console.log('loading .cd-main-content');
     section.load(url + ' .cd-main-content > *', function (event) {
+      reverse(Cookies.get("color"));
       // load new content and replace <main> content with the new one
       $('main').html(section);
       //if browser doesn't support CSS transitions - dont wait for the end of transitions
