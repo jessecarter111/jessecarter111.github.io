@@ -52,11 +52,12 @@ jQuery(document).ready(function (event) {
     console.log('loading .cd-main-content');
     section.load(url + ' .cd-main-content > *', function (event) {
       // load new content and replace <main> content with the new one
+      reverse(Cookies.get("color"));
+
       $('main').html(section);
       //if browser doesn't support CSS transitions - dont wait for the end of transitions
       var delay = (transitionsSupported()) ? 1200 : 0;
       setTimeout(function () {
-        reverse(Cookies.get("color"));
         //wait for the end of the transition on the loading bar before revealing the new content
         //(section.hasClass('cd-about')) ? $('body').addClass('cd-about'): $('body').removeClass('cd-about');
         $('body').removeClass('page-is-changing');
