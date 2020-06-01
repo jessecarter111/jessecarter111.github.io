@@ -95,29 +95,6 @@ body::before {
   transition: transform 0.4s 0.4s;
 }
 
-body.white::after,
-body.white::before {
-  /* these are the 2 half blocks which cover the content once the animation is triggered */
-  content: '';
-  height: 50vh;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  background-color: #0e1216;
-  z-index: 1;
-  /* Force Hardware Acceleration */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-transition: -webkit-transform 0.4s 0.4s;
-  -moz-transition: -moz-transform 0.4s 0.4s;
-  transition: transform 0.4s 0.4s;
-}
-
 body::before {
   top: 0;
   -webkit-transform: translateY(-100%);
