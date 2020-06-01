@@ -70,6 +70,10 @@ hr {
   src: "img/globe-white.gif";
 }
 
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 /* -------------------------------- 
 
