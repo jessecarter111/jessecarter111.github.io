@@ -89,6 +89,7 @@ jQuery(document).ready(function (event) {
       $('.content').removeClass('black');
       $('body').addClass('black');
       $('.content').addClass('white');
+      $('.cd-loading-content').attr('background-color', 'black');
       Cookies.set('color', 'black');
     }
     if (color == 'black') {
@@ -97,6 +98,7 @@ jQuery(document).ready(function (event) {
       $('.content').removeClass('white');
       $('body').addClass('white');
       $('.content').addClass('black');
+      $('.cd-loading-content').attr('background-color', 'white');
       Cookies.set('color', 'white');
     }
   }

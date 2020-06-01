@@ -66,6 +66,10 @@ hr {
   margin: 50px auto 50px auto;
 }
 
+#globe-gif {
+  src: "img/globe-white.gif";
+}
+
 
 /* -------------------------------- 
 
@@ -251,7 +255,7 @@ main p {
   top: 50%;
   height: 2px;
   width: 90%;
-  background-color: #fff;
+  background-color: red;
   visibility: hidden;
   -webkit-transition: visibility 0s 0.4s, -webkit-transform 0.4s 0s ease-in;
   -moz-transition: visibility 0s 0.4s, -moz-transform 0.4s 0s ease-in;
