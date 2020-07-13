@@ -5,95 +5,51 @@
   padding: 0;
   margin: 0;
 }
-
 .hide {
   display: none;
 }
-
-.animate_content {
-  animation: animate 3s ease;
-}
-
-.fadeIn {
-  z-index: 10;
-}
-
-/* Primary Style */
-body {
-    font-family: 'raleway';
-    text-align: left;
-}
-
-.black{
-    background-color: #0e1216;
-    color: #fff
-  }
-  
-.white{
-  background-color: #fff;
-  color: #0e1216;
-}
-
-.black a{
-  color: #fff;
-}
-
-.white a{
-    color: #0e1216;
-}
-
-.content {
+.transition_content {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-}
-
-.content .transition {
-  position: fixed;
-  height: 80%;
-  width: 80%;
   margin: auto auto;
   overflow: hidden;
 }
-
-.intro {
-    margin-left: 3rem;
-    margin-top: 3rem;
+.animate_content {
+  animation: animate 3s ease;
 }
-
-.intro h1 {
-    font-size: 3rem;
-    margin-bottom: 0;
+.fadeIn {
+  z-index: 10;
 }
-
-.intro h3 {
-    font-size: 1rem;
-    margin-top: 0;
+/*  home
+-----------------------------------*/
+.home {
+  background: #5da9e9;
 }
-
-hr {
-    border-style: none;
-    border-top-style: dotted;
-    border-color: slategray;
-    border-width: 5px;
-    width: 5%;
-    margin: 50px auto 50px auto;
+/*  Projects
+-----------------------------------*/
+.projects {
+  background: #bd5de9;
 }
-
-.experience_nav{
-  margin-left: 3rem;
+/*  Skills
+-----------------------------------*/
+.skills {
+  background: #5de974;
 }
-
-.selected {
-  text-decoration: underline;
-  font-weight: 400;
+/*  About
+-----------------------------------*/
+.about {
+  background: #fb9b33;
 }
-
-.wrapper {
-  position: relative;
-  background-color: white;
+/*  Contact
+-----------------------------------*/
+.contact {
+  background: #c9cdc0;
 }
-
 /*****************************************************************
 ~ Mobile media-queries (max-width: 767px)
 ******************************************************************/
