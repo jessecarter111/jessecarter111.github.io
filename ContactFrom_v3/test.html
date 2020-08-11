@@ -35,7 +35,7 @@
 
 					<form action="?" method="POST">
 						<div class="g-recaptcha" data-sitekey="6LeFqL0ZAAAAAAYyhD9ff6Wa6VJeNpyz0y8X1REt"
-							data-callback="recaptcha-callback"></div>
+							data-callback="verifyCallback"></div>
 						<br />
 					</form>
 
@@ -99,8 +99,8 @@
 	</script>
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
-		function recaptcha-callback() {
-			alert("Oh god is it working?");
+		var verifyCallback = function(response) {
+			alert(response);
 		};
 	</script>
 	<script>
