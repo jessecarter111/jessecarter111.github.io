@@ -101,15 +101,17 @@
 	<script>
 		var verifyCallback = function(response) {
 			var x = JSON.parse(response);
-			alert(x.success);
+			console.log(x.success);
+			console.log(x.challenge_ts);
+			console.log(x.hostname);
 		};
 	</script>
-	<script>
+	<!-- <script>
 		function onSubmit(token) {
 			document.getElementById("demo-form").submit();
 			console.log("does this trigger?");
 		}
-	</script>
+	</script> -->
 
 </body>
 
