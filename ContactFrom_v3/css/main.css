@@ -94,10 +94,6 @@ iframe {
 	border: none !important;
 }
 
-
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ Contact 2 ]*/
 .bg-contact3 {
@@ -119,17 +115,16 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: rgba(255,255,255,0.8);
-  
 }
 
 .wrap-contact3 {
+  height: 100%;
   width: 500px;
   background: #0e1216;
-  background: -o-linear-gradient(45deg, #0e1216, #222222);
-  background: -moz-linear-gradient(45deg, #0e1216, #222222);
-  background: linear-gradient(45deg, #0e1216, #222222);
-  background: -webkit-linear-gradient(45deg, #0e1216, #222222);
+  background: -o-linear-gradient(45deg, #0e1216, #0e1216);
+  background: -moz-linear-gradient(45deg, #0e1216, #0e1216);
+  background: linear-gradient(45deg, #0e1216, #0e1216);
+  background: -webkit-linear-gradient(45deg, #0e1216, #0e1216);
   border-radius: 10px;
   overflow: hidden;
   padding: 72px 55px 65px 55px;
@@ -139,6 +134,7 @@ iframe {
 
 .contact3-form {
   width: 100%;
+  text-align: center;
 }
 
 .contact3-form-title {
@@ -567,7 +563,16 @@ textarea.input3 {
   line-height: 1.2;
 }
 
+.g-recaptcha {
+  display: inline-block;
+}
 
+.after-validate {
+  visibility: hidden;
+  height: 0;
+}
 
-
-
+.black {
+  background-color: #0e1216;
+  color: #fff
+}
