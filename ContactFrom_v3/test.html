@@ -100,7 +100,8 @@
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
 		var verifyCallback = function(response) {
-			alert(response);
+			var x = JSON.parse(response);
+			alert(x.success);
 		};
 	</script>
 	<script>
