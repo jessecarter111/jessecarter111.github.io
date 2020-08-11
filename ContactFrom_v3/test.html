@@ -35,8 +35,8 @@
 
 					<form action="?" method="POST">
 						<div class="g-recaptcha" data-sitekey="6LeFqL0ZAAAAAAYyhD9ff6Wa6VJeNpyz0y8X1REt"
-						data-callback="js/recaptcha-callback.js"></div>
-						<br/>
+							data-callback="recaptcha-callback"></div>
+						<br />
 					</form>
 
 					<div class="after-validate">
@@ -44,17 +44,17 @@
 							<input class="input3" type="text" name="name" placeholder="Your Name">
 							<span class="focus-input3"></span>
 						</div>
-	
+
 						<div class="wrap-input3 validate-input" data-validate="Valid email is required: ex@abc.xyz">
 							<input class="input3" type="text" name="email" placeholder="Your Email">
 							<span class="focus-input3"></span>
 						</div>
-	
+
 						<div class="wrap-input3 validate-input" data-validate="Message is required">
 							<textarea class="input3" name="message" placeholder="Your Message"></textarea>
 							<span class="focus-input3"></span>
 						</div>
-	
+
 						<div class="container-contact3-form-btn">
 							<button class="contact3-form-btn">
 								Submit
@@ -98,6 +98,11 @@
 		gtag('config', 'UA-23581568-13');
 	</script>
 	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script>
+		function recaptcha-callback() {
+			alert("Oh god is it working?");
+		};
+	</script>
 	<script>
 		function onSubmit(token) {
 			document.getElementById("demo-form").submit();

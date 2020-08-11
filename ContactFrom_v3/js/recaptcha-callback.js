@@ -1,3 +1,3 @@
-var verifyCallback = function(response) {
+var callback = function (response) {
     alert(response);
 };
