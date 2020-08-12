@@ -101,9 +101,8 @@
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
 		var verifyCallback = function (response) {
-			alert('g-recaptcha-response: ' + grecaptcha.getResponse()); 
 			var url = 'proxy.php?url=' + 'https://www.google.com/recaptcha/api/siteverify';
-			console.log(url);
+			// console.log(url);
 			$.ajax({
 				'url': url,
 				dataType: 'json',
