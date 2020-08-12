@@ -102,13 +102,16 @@
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
 		var verifyCallback = function (response) {
-			var url = 'proxy.php?url=' + 'https://www.google.com/recaptcha/api/siteverify';
+			// var url = 'proxy.php?url=' + 'https://www.google.com/recaptcha/api/siteverify';
+			url = 'https://www.google.com/recaptcha/api/siteverify';
 			console.log(url);
 			$.ajax({
 				'url': url,
+				type = "POST",
 				dataType: 'json',
 				data: {
-					response: response
+					response: response,
+					secret: "6LeVDb4ZAAAAAHfdWoXtd3HzkHE0JXjfcMVPd4yX"
 				},
 				success: function (data) {
 					var res = data.success.toString();
