@@ -87,14 +87,11 @@
 	<script>
 		var verifyCallback = function (response) {
 			url = 'proxy.php?url=' + 'https://www.google.com/recaptcha/api/siteverify';
-			// url = 'https://www.google.com/recaptcha/api/siteverify';
-			console.log(url);
 			$.ajax({
-				'url': url,
+				url: 'proxy.php',
 				dataType: 'json',
 				data: {
-					response: response,
-					secret: "6LeVDb4ZAAAAAHfdWoXtd3HzkHE0JXjfcMVPd4yX"
+					response: response
 				},
 				success: function (data) {
 					var res = data.success.toString();
@@ -103,13 +100,12 @@
 						document.getElementById('g-recaptcha').innerHTML =
 							'THE CAPTCHA WAS SUCCESSFULLY SOLVED';
 					}
-				} // end of success: 
+				}, // end of success: 
 			}); // end of $.ajax
 			console.log("Ajax ran so it either succeeded or failed.");
 			console.log(url);
 		};
 	</script>
-
 </body>
 
 </html>

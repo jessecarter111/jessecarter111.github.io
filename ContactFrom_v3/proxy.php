@@ -5,7 +5,7 @@ if (!isset($_SERVER['HTTP_X_REQUESTED_WITH'])) {
 }
 header('Content-type: application/json');
 echo "We are inside the script";
-$url=$_GET['url'];
+$url='https://www.google.com/recaptcha/api/siteverify';
 echo $url;
 $response=$_GET['response'];
 echo $response;
