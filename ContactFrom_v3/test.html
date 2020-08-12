@@ -101,25 +101,23 @@
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script>
 		var verifyCallback = function (response) {
-			var onReturnCallback = function (response) {
-				//alert('g-recaptcha-response: ' + grecaptcha.getResponse()); 
-				var url = 'proxy.php?url=' + 'https://www.google.com/recaptcha/api/siteverify';
-				$.ajax({
-					'url': url,
-					dataType: 'json',
-					data: {
-						response: response
-					},
-					success: function (data) {
-						var res = data.success.toString();
-						alert("User verified: " + res);
-						if (res == 'true') {
-							document.getElementById('g-recaptcha').innerHTML =
-								'THE CAPTCHA WAS SUCCESSFULLY SOLVED';
-						}
-					} // end of success: 
-				}); // end of $.ajax 
-			}; // end of onReturnCallback 
+			//alert('g-recaptcha-response: ' + grecaptcha.getResponse()); 
+			var url = 'proxy.php?url=' + 'https://www.google.com/recaptcha/api/siteverify';
+			$.ajax({
+				'url': url,
+				dataType: 'json',
+				data: {
+					response: response
+				},
+				success: function (data) {
+					var res = data.success.toString();
+					alert("User verified: " + res);
+					if (res == 'true') {
+						document.getElementById('g-recaptcha').innerHTML =
+							'THE CAPTCHA WAS SUCCESSFULLY SOLVED';
+					}
+				} // end of success: 
+			}); // end of $.ajax
 		};
 	</script>
 	<!-- <script>
