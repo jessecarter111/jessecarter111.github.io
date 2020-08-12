@@ -33,10 +33,11 @@
 						Say Hello
 					</span>
 
-					<form action="?" method="POST">
+					<form action="?" method="POST" id="demo-form">
 						<div class="g-recaptcha" data-sitekey="6LeVDb4ZAAAAAHTGbxAga0_0YeU0oCqeZXhbP_1O"
 							data-callback="verifyCallback"></div>
 						<br />
+						<input type="submit" value="Submit">
 					</form>
 
 					<div class="after-validate">
@@ -102,13 +103,14 @@
 	<script>
 		var verifyCallback = function (response) {
 			var url = 'proxy.php?url=' + 'https://www.google.com/recaptcha/api/siteverify';
-			// console.log(url);
+			console.log(url);
 			$.ajax({
 				'url': url,
 				dataType: 'json',
 				data: {
 					response: response
 				},
+
 				success: function (data) {
 					var res = data.success.toString();
 					alert("User verified: " + res);
@@ -120,12 +122,12 @@
 			}); // end of $.ajax
 		};
 	</script>
-	<!-- <script>
+	<script>
 		function onSubmit(token) {
 			document.getElementById("demo-form").submit();
 			console.log("does this trigger?");
 		}
-	</script> -->
+	</script>
 
 </body>
 
