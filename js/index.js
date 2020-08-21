@@ -103,10 +103,11 @@ function is_touch_enabled() {
     if (('ontouchstart' in window) ||
         (navigator.maxTouchPoints > 0) ||
         (navigator.msMaxTouchPoints > 0)) {
-
-            document.querySelector('.nav').addClass('touch');
+            console.log("No touch detected");
+            document.querySelector('nav').addClass('touch');
     } else {
         $('nav').addClass('no-touch');
+        console.log("No touch detected");
     }
     
 }
