@@ -75,7 +75,19 @@ p {
 /*************************************
     NAV 
 *************************************/
-nav.no-touch {
+/* nav.no-touch {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    z-index: 1;
+    width: 100%;
+    opacity: 0;
+    transition: ease-out 0.5s;
+} */
+
+nav {
     display: flex;
     position: fixed;
     justify-content: space-around;
@@ -87,12 +99,18 @@ nav.no-touch {
     transition: ease-out 0.5s;
 }
 
-nav.no-touch:hover {
+nav:hover {
     opacity: 1;
     transition: ease-in 0.5s;
 }
 
-nav.touch {
+
+/* nav.no-touch:hover {
+    opacity: 1;
+    transition: ease-in 0.5s;
+} */
+
+/* nav.touch {
     transition: ease-in 0.5s;
     display: flex;
     position: fixed;
@@ -103,7 +121,7 @@ nav.touch {
     width: 100%;
     opacity: 1;
     transition: ease-in 0.5s;
-}
+} */
 
 .nav-links {
     display: inline-flex;
@@ -501,10 +519,10 @@ a.text-link:hover {
         overflow-x: hidden;
     }
 
-    /* nav {
+    nav {
         opacity: 1;
         animation: navLinkFade 2s;
-    } */
+    }
 
     .nav-links {
         position: absolute;

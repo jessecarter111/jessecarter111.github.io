@@ -99,20 +99,19 @@ function resize() {
     }
 }
 
-function is_touch_enabled() {
-    if (('ontouchstart' in window) ||
-        (navigator.maxTouchPoints > 0) ||
-        (navigator.msMaxTouchPoints > 0)) {
-            console.log("No touch detected");
-            document.querySelector('nav').addClass('touch');
-    } else {
-        $('nav').addClass('no-touch');
-        console.log("No touch detected");
-    }
-    
-}
+// function is_touch_enabled() {
+//     if (('ontouchstart' in window) ||
+//         (navigator.maxTouchPoints > 0) ||
+//         (navigator.msMaxTouchPoints > 0)) {
+//             console.log("No touch detected");
+//             document.querySelector('nav').addClass('touch');
+//     } else {
+//         $('nav').addClass('no-touch');
+//         console.log("No touch detected");
+//     }
+// }
 
+// is_touch_enabled();
 window.onresize = resize;
 navSlide();
 Boxlayout.init();
-is_touch_enabled();
