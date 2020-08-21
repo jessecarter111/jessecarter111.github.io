@@ -44,6 +44,7 @@ This is general style */
 
 .black a {
     color: #fff;
+    font-weight: bold;
 }
 
 .white a {
@@ -67,10 +68,14 @@ h4 {
     font-size: 1em;
 }
 
+p {
+    line-height: 200%;
+}
+
 /*************************************
     NAV 
 *************************************/
-nav {
+nav.no-touch {
     display: flex;
     position: fixed;
     justify-content: space-around;
@@ -82,7 +87,20 @@ nav {
     transition: ease-out 0.5s;
 }
 
-nav:hover {
+nav.no-touch:hover {
+    opacity: 1;
+    transition: ease-in 0.5s;
+}
+
+nav.touch {
+    transition: ease-in 0.5s;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    z-index: 1;
+    width: 100%;
     opacity: 1;
     transition: ease-in 0.5s;
 }
@@ -110,12 +128,10 @@ nav:hover {
 
 .nav-links.black a {
     color: #fff;
-    /* text-decoration: none; */
 }
 
 .nav-links.white a {
     color: #0e1216;
-    /* text-decoration: none; */
 }
 
 .hamburg {
@@ -155,13 +171,14 @@ nav:hover {
 *************************************/
 .home {
     padding-top: 4em;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
         "fh fh fh"
-        "c c c"
-        ". . .";
+        "c c c";
+    margin: 0 15%;
 }
 
 .big-af {
@@ -172,6 +189,7 @@ nav:hover {
     grid-area: fh;
     text-align: center;
     width: 100%;
+    margin-bottom: 3%;
 }
 
 .fancy-header span {
@@ -180,92 +198,75 @@ nav:hover {
 
 .text1 {
     letter-spacing: 8px;
-    margin-bottom: 20px;
     background: #0e1216;
     position: relative;
     animation: text 3s 1;
 }
 
 .home-content {
-    margin-top: 50px;
     grid-area: c;
-    animation: regularFade 4s;
-}
-
-/*************************************
-    Projects
-*************************************/
-.proj {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "g l";
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card .l {
-    grid-area: g;
-    background-color: transparent;
+    animation: regularFade 6s;
     width: 100%;
-    height: 100%;
-}
-
-.flip-card .r {
-    grid-area: g;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
     text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
 }
 
-.proj-img {
-    width: 100%;
-    height: 100%;
+.home-content span {
+    display: block;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    transition: all 1.5s;
+.main-blurb {
+    padding-bottom: 2%;
 }
 
-.flip-front-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.links-blurb {
+    padding-bottom: 2%;
 }
 
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    /* Safari */
-    backface-visibility: hidden;
+.links-blurb a {
+    text-decoration: none;
 }
 
-/* Style the back side */
-.flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
+.links-blurb a:hover {
+    text-decoration: underline;
+}
+
+.links-logos {
+    margin: 1%;
+    display: inline;
+}
+
+.links-logos img {
+    margin: 0 0.5%;
 }
 
 /*************************************
     RESUME 
 *************************************/
+.resume-display {
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+
+.resume-display img {
+    width: 60%;
+    height: auto;
+    margin: 5% 0 5%;
+}
+
+.dl-prompt {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.dl-prompt a {
+    text-decoration: none;
+}
+
+.dl-prompt:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 /*************************************
     Experience Page 
@@ -382,18 +383,19 @@ nav:hover {
 
 .demo-box p:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 /*************************************
     EXPERIENCE TILES
 *************************************/
 .box-content {
-    text-align: center;
+    /* text-align: center; */
     display: grid;
     height: 100%;
     margin: auto 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "jt jt jt"
         "jl jd jd";
@@ -415,28 +417,52 @@ nav:hover {
 
 .job-logo {
     grid-area: jl;
-    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 20px;
+    text-align: left;
 }
 
 .job-intro {
     grid-area: ji;
-    align-self: center;
-}
-
-.job-intro h2 {
-    text-align: center;
-    font-size: 2em;
-    width: 95%;
-}
-
-.job-intro h4 {
-    text-align: left;
-    font-size: 1em;
 }
 
 .job-detail {
     grid-area: jd;
-    padding-bottom: 50px;
+    padding-right: 5%;
+    padding-top: 10%;
+}
+
+.lm.job-detail {
+    padding-top: 13%
+}
+
+.mr.job-detail {
+    padding-top: 15%
+}
+
+.general-description {
+    grid-area: gd;
+    margin: 5% 10% 2.5%;
+    text-align: center;
+}
+
+.stack-logos {
+    padding: 3.5% 0;
+}
+
+.pl{
+    vertical-align: middle;
+}
+
+a.text-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+}
+
+a.text-link:hover {
+    text-decoration: underline;
 }
 
 .arrow {
@@ -466,22 +492,6 @@ nav:hover {
     animation-delay: -0.4s;
 }
 
-@keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
-}
-
 /*************************************
     MEDIA  QUERYS 
 *************************************/
@@ -490,6 +500,11 @@ nav:hover {
     body {
         overflow-x: hidden;
     }
+
+    /* nav {
+        opacity: 1;
+        animation: navLinkFade 2s;
+    } */
 
     .nav-links {
         position: absolute;
@@ -526,16 +541,37 @@ nav:hover {
         transform: translateX(0%);
     }
 
-    .proj {
-        display: grid;
-        height: 100vh;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: none;
+    .home {
+        margin: 0 10% 3%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .box-content {
+
         grid-template-areas:
-            "g"
-            "l";
+            "jt jt jt"
+            "jl jl jl"
+            "jd jd jd";
     }
 
+    .stack-logos {
+        padding-bottom: 0;
+    }
+
+    .job-detail {
+        padding-top: 0;
+        padding-left: 5%;
+        padding-bottom: 2%;
+    }
+
+    .lm.job-detail {
+        padding-top: 0;
+    }
+
+    .mr.job-detail{
+        padding-top: 0;
+    }
 }
 
 @keyframes navLinkFade {
@@ -575,6 +611,22 @@ nav:hover {
     85% {
         letter-spacing: 8px;
         margin-bottom: -40px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
     }
 }
 

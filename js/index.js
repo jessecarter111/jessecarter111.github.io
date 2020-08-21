@@ -1,3 +1,5 @@
+var expanded = false;
+
 var Boxlayout = function () {
 
     var wrapper = document.body,
@@ -30,6 +32,7 @@ var Boxlayout = function () {
 
     function _openSection(element) {
         if (!element.classList.contains(expandedClass)) {
+            expanded = true;
             console.log(element.classList);
             element.classList.add(expandedClass);
             wrapper.classList.add(hasExpandedClass);
@@ -49,6 +52,7 @@ var Boxlayout = function () {
 
     function _closeSection(element) {
         if (element.classList.contains(expandedClass)) {
+            expanded = false;
             element.classList.remove(expandedClass);
             wrapper.classList.remove(hasExpandedClass);
             $('.box-content').fadeIn(100).delay(300).fadeOut();
@@ -88,13 +92,26 @@ function resize() {
         setTimeout(function () {
             $(".arrow").css("visibility", "hidden");
         }, 100);
-    } else {
+    } else if (!(window.matchMedia("(max-width: 700px)").matches) && expanded) {
         setTimeout(function () {
             $(".arrow").css("visibility", "visible");
         }, 100);
     }
 }
 
+function is_touch_enabled() {
+    if (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0)) {
+
+            document.querySelector('.nav').addClass('touch');
+    } else {
+        $('nav').addClass('no-touch');
+    }
+    
+}
+
 window.onresize = resize;
 navSlide();
 Boxlayout.init();
+is_touch_enabled();
