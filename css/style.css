@@ -188,7 +188,7 @@ nav:hover {
             HOME PAGE
 *************************************/
 .home {
-    padding-top: 4em;
+    padding-top: 3em;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -215,7 +215,7 @@ nav:hover {
 }
 
 .text1 {
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     background: #0e1216;
     position: relative;
     animation: text 3s 1;
@@ -225,7 +225,7 @@ nav:hover {
     grid-area: c;
     animation: regularFade 6s;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 .home-content span {
@@ -251,6 +251,7 @@ nav:hover {
 .links-logos {
     margin: 1%;
     display: inline;
+    text-align: center;
 }
 
 .links-logos img {
