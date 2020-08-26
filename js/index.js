@@ -33,7 +33,6 @@ var Boxlayout = function () {
     function _openSection(element) {
         if (!element.classList.contains(expandedClass)) {
             expanded = true;
-            console.log(element.classList);
             element.classList.add(expandedClass);
             wrapper.classList.add(hasExpandedClass);
             $('.box-content').fadeOut(100).delay(300).fadeIn();
@@ -88,30 +87,41 @@ const navSlide = () => {
 }
 
 function resize() {
-    if (window.matchMedia("(max-width: 700px)").matches) {
+    if (window.matchMedia("(max-width: 850px)").matches) {
         setTimeout(function () {
             $(".arrow").css("visibility", "hidden");
         }, 100);
-    } else if (!(window.matchMedia("(max-width: 700px)").matches) && expanded) {
+    } else if (!(window.matchMedia("(max-width: 850px)").matches) && expanded) {
         setTimeout(function () {
             $(".arrow").css("visibility", "visible");
         }, 100);
     }
 }
 
-// function is_touch_enabled() {
-//     if (('ontouchstart' in window) ||
-//         (navigator.maxTouchPoints > 0) ||
-//         (navigator.msMaxTouchPoints > 0)) {
-//             console.log("No touch detected");
-//             document.querySelector('nav').addClass('touch');
-//     } else {
-//         $('nav').addClass('no-touch');
-//         console.log("No touch detected");
-//     }
-// }
+$(".arrow.it").click(function () {
+    document.querySelector('.job-logo.it').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
 
-// is_touch_enabled();
+$(".arrow.lm").click(function () {
+    document.querySelector('.job-logo.lm').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+$(".arrow.mr").click(function () {
+    document.querySelector('.job-logo.mr').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+$(".arrow.ik").click(function () {
+    document.querySelector('.job-logo.ik').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
 window.onresize = resize;
 navSlide();
 Boxlayout.init();

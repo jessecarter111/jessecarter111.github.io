@@ -1,4 +1,6 @@
-/* Primary Style */
+/*************************************
+    Primary Style
+*************************************/
 * {
     margin: 0px;
     padding: 0px;
@@ -30,8 +32,6 @@ hr {
     margin: 50px auto 50px auto;
 }
 
-/* 
-This is general style */
 .black {
     background-color: #0e1216;
     color: #fff
@@ -75,18 +75,6 @@ p {
 /*************************************
     NAV 
 *************************************/
-/* nav.no-touch {
-    display: flex;
-    position: fixed;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    z-index: 1;
-    width: 100%;
-    opacity: 0;
-    transition: ease-out 0.5s;
-} */
-
 nav {
     display: flex;
     position: fixed;
@@ -103,25 +91,6 @@ nav:hover {
     opacity: 1;
     transition: ease-in 0.5s;
 }
-
-
-/* nav.no-touch:hover {
-    opacity: 1;
-    transition: ease-in 0.5s;
-} */
-
-/* nav.touch {
-    transition: ease-in 0.5s;
-    display: flex;
-    position: fixed;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    z-index: 1;
-    width: 100%;
-    opacity: 1;
-    transition: ease-in 0.5s;
-} */
 
 .nav-links {
     display: inline-flex;
@@ -191,11 +160,11 @@ nav:hover {
     padding-top: 3em;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     grid-template-areas:
-        "fh fh fh"
-        "c c c";
+        "fh"
+        "c";
     margin: 0 15%;
 }
 
@@ -295,7 +264,7 @@ nav:hover {
     z-index: 0;
     width: 50%;
     height: 50%;
-    /* overflow: hidden; */
+    overflow: hidden;
     -webkit-transform: scale(1);
     transform: scale(1);
     will-change: transform;
@@ -409,20 +378,12 @@ nav:hover {
     EXPERIENCE TILES
 *************************************/
 .box-content {
-    /* text-align: center; */
     display: grid;
-    height: 100%;
-    margin: auto 0;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
         "jt jt jt"
         "jl jd jd";
-}
-
-.job-logo-img {
-    width: 100%;
-    height: auto;
 }
 
 .job-display {
@@ -441,30 +402,21 @@ nav:hover {
 
 .job-logo {
     grid-area: jl;
-    padding-left: 9%;
+    padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 20px;
     text-align: left;
 }
 
-.job-intro {
-    grid-area: ji;
-}
-
 .job-detail {
     grid-area: jd;
     padding-right: 5%;
-    padding-left: 9%;
+    padding-left: 5%;
+    /* padding-left: 9%; */
     padding-top: 10%;
+    padding-bottom: 5%;
 }
 
-.job-detail h3 {
-    padding-left: 4.5%;
-}
-
-.note-contribs {
-    margin-left: 9%;
-}
 
 .lm.job-detail {
     padding-top: 13%
@@ -474,17 +426,11 @@ nav:hover {
     padding-top: 15%
 }
 
-.general-description {
-    grid-area: gd;
-    margin: 5% 10% 2.5%;
-    text-align: center;
-}
-
 .stack-logos {
     padding: 3.5% 0;
 }
 
-.pl{
+.pl {
     vertical-align: middle;
 }
 
@@ -504,6 +450,7 @@ a.text-link:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .arrow span {
@@ -528,8 +475,7 @@ a.text-link:hover {
 /*************************************
     MEDIA  QUERYS 
 *************************************/
-
-@media screen and (max-width:650px) {
+@media screen and (max-width:800px) {
     body {
         overflow-x: hidden;
     }
@@ -581,11 +527,9 @@ a.text-link:hover {
     .resume-display img {
         padding: 8vh 0 5%;
     }
-}
 
-@media screen and (max-width:700px) {
     .box-content {
-
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "jt jt jt"
             "jl jl jl"
@@ -606,8 +550,12 @@ a.text-link:hover {
         padding-top: 0;
     }
 
-    .mr.job-detail{
+    .mr.job-detail {
         padding-top: 0;
+    }
+
+    .note-contribs {
+        margin-left: 5%;
     }
 }
 
@@ -624,10 +572,14 @@ a.text-link:hover {
         padding-bottom: 4%;
     }
 
-    #mr-box-header{
+    #mr-box-header {
         font-size: 1.5rem;
     }
-    
+
+    .job-logo-img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width:430px) {
@@ -695,7 +647,3 @@ a.text-link:hover {
         transform: rotate(45deg) translate(20px, 20px);
     }
 }
-
-/* 
-Credit for the nav bar
-https://www.youtube.com/watch?v=gXkqy0b4M5g */
