@@ -83,14 +83,14 @@ nav {
     min-height: 8vh;
     z-index: 1;
     width: 100%;
-    opacity: 0;
-    transition: ease-out 0.5s;
+    /* opacity: 0; */
+    animation: regularFade 3s;
 }
 
-nav:hover {
+/* nav:hover {
     opacity: 1;
     transition: ease-in 0.5s;
-}
+} */
 
 .nav-links {
     display: inline-flex;
@@ -157,7 +157,7 @@ nav:hover {
             HOME PAGE
 *************************************/
 .home {
-    padding-top: 3em;
+    padding-top: 4%;
     height: 100%;
     display: grid;
     grid-template-columns: auto;
@@ -210,10 +210,6 @@ nav:hover {
 }
 
 .links-blurb a {
-    text-decoration: none;
-}
-
-.links-blurb a:hover {
     text-decoration: underline;
 }
 
@@ -560,6 +556,10 @@ a.text-link:hover {
 }
 
 @media screen and (max-width:490px) {
+    .home {
+        padding-top: 7%;
+    }
+
     .big-af {
         font-size: 4em;
     }
