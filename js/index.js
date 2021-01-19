@@ -70,7 +70,6 @@ const navSlide = () => {
     //Toggle Nav
     hamburg.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
-        console.log("Ayo this shit working?");
 
         //Animate links
         navlinks.forEach((link, index) => {
